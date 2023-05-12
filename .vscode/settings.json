@@ -6,8 +6,9 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        ".venv": true,
-        "**/__pycache__": true
+        ".venv/": true,
+        "**/__pycache__": true,
+        ".venv": true
     },
     "hide-files.files": []
 }
