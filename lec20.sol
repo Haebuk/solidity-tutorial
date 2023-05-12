@@ -1,52 +1,36 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
-// 구조체
+contract lec21 {
+    string private outcome = "";
 
-contract lec20 {
-    struct Character {
-        uint age;
-        string name;
-        string job;
+    function isIt5(uint _number) public returns (string memory) {
+        if (_number == 5) {
+            outcome = "Yes, it is 5";
+            return outcome;
+        }
+        // return 하니까 else 안 써도 되긴 함
+        else {
+            outcome = "No, it is not 5";
+            return outcome;
+        }
     }
 
-    mapping(uint => Character) public CharacterMapping;
-    Character[] public CharacterArray;
-
-    function createCharacter(
-        uint _age,
-        string memory _name,
-        string memory _job
-    ) public pure returns (Character memory) {
-        return Character(_age, _name, _job);
-    }
-
-    function createCharacterMapping(
-        uint _key,
-        uint _age,
-        string memory _name,
-        string memory _job
-    ) public {
-        CharacterMapping[_key] = Character(_age, _name, _job);
-    }
-
-    function getCharacterMapping(
-        uint _key
-    ) public view returns (Character memory) {
-        return CharacterMapping[_key];
-    }
-
-    function createCharacterArray(
-        uint _age,
-        string memory _name,
-        string memory _job
-    ) public {
-        CharacterArray.push(Character(_age, _name, _job));
-    }
-
-    function getCharacterArray(
-        uint _index
-    ) public view returns (Character memory) {
-        return CharacterArray[_index];
+    function isIt5or3or1(uint _number) public returns (string memory) {
+        if (_number == 5) {
+            outcome = "Yes, it is 5";
+            return outcome;
+        } else if (_number == 3) {
+            outcome = "Yes, it is 3";
+            return outcome;
+        } else if (_number == 1) {
+            outcome = "Yes, it is 1";
+            return outcome;
+        }
+        // return 하니까 else 안 써도 되긴 함
+        else {
+            outcome = "No, it is not 5, 3 or 1";
+            return outcome;
+        }
     }
 }
